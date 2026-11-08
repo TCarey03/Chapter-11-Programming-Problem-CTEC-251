@@ -12,19 +12,32 @@ public class Main {
         System.out.println("Duration: " + remoteProxy.getDuration());
         remoteProxy.play();
 
-        System.out.println();
+        // Test remote proxy again
+        System.out.println("\nTesting remote proxy again:");
 
-        System.out.println("===== VIRTUAL PROXY TEST =====");
+        remoteProxy.getTitle();
+        remoteProxy.play();
+
+        System.out.println("\n===== VIRTUAL PROXY TEST =====");
 
         MediaItem virtualProxy =
                 new VirtualMediaProxy("Spider-Man Movie", 6500);
 
         System.out.println("Virtual proxy created.");
 
+        // First method call loads the media
         System.out.println("Title: " + virtualProxy.getTitle());
 
         System.out.println("Duration: " + virtualProxy.getDuration());
 
         virtualProxy.play();
+
+        // Test virtual proxy again
+        System.out.println("\nTesting virtual proxy again:");
+
+        virtualProxy.getTitle();
+        virtualProxy.play();
+
+        System.out.println("\n===== TESTING COMPLETE =====");
     }
 }
